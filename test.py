@@ -1,1 +1,4 @@
-print("I really hope it snows today")
+x = 5
+x *= 2
+x -= 3
+print(x)
