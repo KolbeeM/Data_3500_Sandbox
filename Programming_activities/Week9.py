@@ -4,13 +4,14 @@ Write a Python program that creates a list of all even numbers from 2 to 100 usi
 """
 evens = [i for i in range(2, 101, 2)]
 print("evens", evens)
-
 """
 Programming Activity 2
 Write a Python program that takes a list of strings as input, where some strings might have leading or trailing spaces. Use list comprehension to remove these spaces from each string in the list.
 """
-
-
+user_input = input("Enter strings separated by commas: ")
+string_list = user_input.split(",")
+cleaned_list = [s.strip() for s in string_list]
+print("Cleaned list:", cleaned_list)
 """
 Programming Activity 3
 Write a Python program which asks the user their name.  
@@ -21,8 +22,9 @@ welcome, NAME ALLCAPS!.
  - change the string to be all upper case
  - print to the console: "welcome, NAME ALLCAPS!" (adding an exclamation
 """
-
-
+name = input("What is your name? ")
+name_upper = name.upper()
+print("welcome,", name_upper + "!")
 """
 Programming Activity 4
 Create a variable that stores the sentence below, and print the sentence to 
@@ -42,12 +44,10 @@ Whoa, and then I was like Whoa"
  - print the new sentence.
 """
 sentence = "dude, I just biked down that mountain and at first I was like Whoa and then I was like Whoa. Whoa is my favorite word."
-
 words = sentence.split(" ")
 print("words:", words)
 words[0] = words[0].capitalize()
 print(words)
-
 first_whoa = False
 i = 0
 for word in words:
